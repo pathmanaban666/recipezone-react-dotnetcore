@@ -1,0 +1,34 @@
+# Node modules for frontend
+/Frontend/node_modules/
+
+# Frontend build outputs
+/Frontend/build/
+/Frontend/dist/
+
+# Backend build outputs
+/Backend/**/bin/
+/Backend/**/obj/
+/Backend/**/publish/
+
+# IDEs and editors
+.vs/
+.idea/
+.vscode/
+**/.vscode/
+**/.vs/
+
+# User files
+*.user
+*.suo
+*.log
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets and environment files
+/Backend/RecipeWebApp/appsettings.Development.json
+/Frontend/.env
+/Backend/RecipeWebApp/secrets/

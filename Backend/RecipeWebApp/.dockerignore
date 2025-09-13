@@ -1,0 +1,27 @@
+# Ignore build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code files
+.vscode/
+
+# Rider/JetBrains files
+.idea/
+
+# OS files
+*.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+
+# Test projects (if located outside and not needed for production)
+../Tests/

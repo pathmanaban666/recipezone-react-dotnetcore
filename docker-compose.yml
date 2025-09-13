@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./Frontend
+    ports:
+      - "3000:80"  # Expose React app on localhost:3000
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./Backend/RecipeWebApp
+    ports:
+      - "8080:8080"  # Optional: expose backend if you want to call it directly
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
