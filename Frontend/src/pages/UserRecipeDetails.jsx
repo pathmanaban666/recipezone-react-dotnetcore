@@ -60,7 +60,7 @@ function UserRecipeDetails() {
   }
 
   return (
-    <div className="max-w-4xl mt-20 mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-4xl mt-20 mx-auto p-6">
       <h2 className="text-3xl font-semibold text-center mb-6">{recipe.title}</h2>
 
       {recipe.imageUrl ? (
@@ -75,11 +75,10 @@ function UserRecipeDetails() {
         <p className="text-center text-gray-500 italic mb-6">No image available</p>
       )}
 
-      <div className="space-y-4 text-gray-800">
-        <p><strong>Description:</strong> {recipe.description}</p>
-        <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
-        <p><strong>Instructions:</strong> {recipe.instructions}</p>
-        <p><strong>Visibility:</strong> {recipe.isPublic ? 'Everyone can see this recipe through the community' : 'Only you can see this recipe'}</p>
+      <div className="space-y-6">
+        <InfoBlock label="Description" value={recipe.description} />
+        <InfoBlock label="Ingredients" value={recipe.ingredients} />
+        <InfoBlock label="Instructions" value={recipe.instructions} />
       </div>
 
       <div className="mt-6 flex justify-center gap-4">
@@ -111,5 +110,12 @@ function UserRecipeDetails() {
     </div>
   );
 }
+
+const InfoBlock = ({ label, value }) => (
+  <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
+    <h3 className="text-xl font-semibold text-gray-700 mb-2">{label}:</h3>
+    <p className="text-gray-600 whitespace-pre-wrap break-words">{value}</p>
+  </div>
+);
 
 export default UserRecipeDetails;
