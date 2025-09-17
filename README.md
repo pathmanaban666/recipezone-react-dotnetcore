@@ -62,48 +62,48 @@
 ### Backend Setup
 
 1. Clone the repository:
-```bash
-git clone https://github.com/pathmanaban666/recipezone-react-dotnetcore.git
-```
+    ```bash
+    git clone https://github.com/pathmanaban666/recipezone-react-dotnetcore.git
+    ```
 
 2. Navigate to the backend directory:
-```bash
-cd Backend/RecipeWebApp
-```
+    ```bash
+    cd recipezone-react-dotnetcore/Backend/RecipeWebApp
+    ```
 
 3. Restore NuGet packages:
-```bash
-dotnet restore
-```
+    ```bash
+    dotnet restore
+    ```
 
 4. Update appsettings.json:
 Before running the backend, update appsettings.json with the required credentials.
-##### Required Credentials:
-| Credential Type     | Where to Get It                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------------|
-| **Cloudinary**      | [cloudinary.com](https://cloudinary.com) ->  Obtain the Api Key and Api Secret               |
-| **OpenRouter API**  | [openrouter.ai](https://openrouter.ai) -> Obtain the ApiKey key for the AI model             |
-| **NotificationAPI** | [notificationapi.com](https://notificationapi.com) -> Obtain the ClientId and Client Secret  |
-| **Database**        | SQL Server / LocalDB connection string                                                       |
-| **JWT Credentials** | Define a strong secret key and issuer                                                        |
+    ##### Required Credentials:
+    | Credential Type     | Where to Get It                                                                              |
+    | ------------------- | ---------------------------------------------------------------------------------------------|
+    | **Cloudinary**      | [cloudinary.com](https://cloudinary.com) ->  Obtain the Api Key and Api Secret               |
+    | **OpenRouter API**  | [openrouter.ai](https://openrouter.ai) -> Obtain the ApiKey key for the AI model             |
+    | **NotificationAPI** | [notificationapi.com](https://notificationapi.com) -> Obtain the ClientId and Client Secret  |
+    | **Database**        | SQL Server / LocalDB connection string                                                       |
+    | **JWT Credentials** | Define a strong secret key and issuer                                                        |
 
 5. Initialize the database:
-```bash
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-```
+    ```bash
+    dotnet ef migrations add InitialCreate
+    dotnet ef database update
+    ```
 
 6. Start the backend server:
-```bash
-dotnet run
-```
+    ```bash
+    dotnet run
+    ```
 
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
-```bash
-cd Frontend
-```
+    ```bash
+    cd recipezone-react-dotnetcore/Frontend
+    ```
 
 2. Install the required dependencies:
     ```bash
@@ -111,21 +111,21 @@ cd Frontend
     ```
 
 3. Create a `.env` file inside the **Frontend** folder and add the following environment variable if you are running the backend locally with `dotnet run`:
-   ```bash
-   REACT_APP_BACKEND_URL=http://localhost:5118
-   ```
+    ```bash
+    REACT_APP_BACKEND_URL=http://localhost:5118
+    ```
 
    If you are running the application using **Docker Compose**, update the `.env` file as follows:
-   ```bash
-   REACT_APP_BACKEND_URL=http://localhost:8080
-   ```
+    ```bash
+    REACT_APP_BACKEND_URL=http://localhost:8080
+    ```
 
 4. Run the frontend development server:
     ```bash
     npm start
     ```
 
-Now, your backend should be running at `http://localhost:5118` and frontend at `http://localhost:3000`.
+   Now, your backend should be running at `http://localhost:5118` and frontend at `http://localhost:3000`.
 
 ---
 
